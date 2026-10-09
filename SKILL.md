@@ -51,7 +51,18 @@ For a new authored document, follow the `lark-doc` creation workflow: presentati
 
 Create a new document for each scheduled run when the user asks for an archive. Do not update an old document unless explicitly requested. Report the document URL and distinguish created, verified, and failed states.
 
-### 5. Schedule after explicit approval
+### 5. Confirm readiness before scheduling
+
+Do not enable a recurring task until the user has confirmed all four checkpoints:
+
+- **Report format:** the user has reviewed the sample and is satisfied with its structure and level of detail.
+- **Source reliability:** sources are linked, dated, relevant, and preferably primary; claims can be traced to them, and the user accepts the source scope and any stated limitations.
+- **Mobile readability:** the Feishu document was created and fetched successfully, and the user confirms it is readable in the Feishu mobile app. A desktop fetch alone does not confirm phone readability.
+- **Run and delivery details:** the exact first-run date, recurrence, time, timezone, where the full report will appear, how the user will receive the status or link, and whether each run creates a new document are stated and confirmed.
+
+If any checkpoint is pending, leave the task disabled and show which item remains unconfirmed. Do not treat a general “looks good” as confirmation of details the user has not reviewed.
+
+### 6. Schedule after the readiness gate
 
 Before writing an automation, restate the recurrence, first-run date, time, timezone, destination, and whether each run creates a new Feishu document.
 
@@ -79,8 +90,8 @@ Use these as request shapes, not as fixed topics:
 
 - 中文：关注本周 AI 发展；先找资料 skill，优先官方来源；生成飞书样例，标注事实、推断和未知项；暂时不要设定时任务。
 - English: Track this week’s AI developments; find a research skill first, prioritize official sources, create a Feishu sample, label facts, inferences, and unknowns, and do not schedule it yet.
-- 中文：每周五 08:00（Asia/Shanghai）从指定日期开始收集动态，每次创建新的飞书文档；先展示任务摘要，确认后再启用。
-- English: Starting on the specified date, collect updates every Friday at 08:00 Asia/Shanghai, create a new Feishu document for each run, show the schedule summary first, and enable it only after confirmation.
+- 中文：每周五 08:00（Asia/Shanghai）从指定日期开始收集动态，每次创建新的飞书文档。先给我样例和来源清单；我确认格式、来源可靠性、手机端可读性、首次运行时间和通知方式后，再启用定时任务。
+- English: Starting on the specified date, collect updates every Friday at 08:00 Asia/Shanghai and create a new Feishu document for each run. Show me the sample and source list first; enable the schedule only after I confirm the format, source reliability, mobile readability, first-run time, and notification method.
 
 Read the supporting references only when the corresponding stage is needed:
 
