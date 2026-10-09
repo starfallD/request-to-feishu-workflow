@@ -73,6 +73,15 @@ For a sample, report what was researched, the Feishu URL, source and verificatio
 
 For a schedule, report the first run, recurrence, timezone, document behavior, and confirmed automation state. Use the state terms `draft`, `suggested`, `awaiting confirmation`, `active`, `paused`, or `failed` accurately.
 
+## Example request patterns / 示例请求
+
+Use these as request shapes, not as fixed topics:
+
+- 中文：关注本周 AI 发展；先找资料 skill，优先官方来源；生成飞书样例，标注事实、推断和未知项；暂时不要设定时任务。
+- English: Track this week’s AI developments; find a research skill first, prioritize official sources, create a Feishu sample, label facts, inferences, and unknowns, and do not schedule it yet.
+- 中文：每周五 08:00（Asia/Shanghai）从指定日期开始收集动态，每次创建新的飞书文档；先展示任务摘要，确认后再启用。
+- English: Starting on the specified date, collect updates every Friday at 08:00 Asia/Shanghai, create a new Feishu document for each run, show the schedule summary first, and enable it only after confirmation.
+
 Read the supporting references only when the corresponding stage is needed:
 
 - [research-selection.md](references/research-selection.md) for choosing and combining research skills;
