@@ -23,6 +23,17 @@ Use these states precisely:
 
 A future first run must be represented by an anchored schedule or a scheduler confirmation flow that preserves the requested start date. A plain weekly rule without a start boundary is unsafe when the user says “not this week” or gives a future start date.
 
+## Readiness gate
+
+Keep the recurring task disabled until the user confirms all of these after reviewing the sample:
+
+1. The report format is satisfactory.
+2. The sources are reliable for the requested topic, and the source scope is accepted.
+3. The created and fetched Feishu document is readable in the Feishu mobile app. A successful desktop fetch alone does not establish mobile readability.
+4. The first-run date, recurrence, time, timezone, report destination, notification or link delivery method, and new-document behavior are correct.
+
+If anything is unconfirmed, report the pending checkpoint and leave the automation disabled.
+
 The scheduled prompt must state:
 
 - the selected research skill and source priorities;
