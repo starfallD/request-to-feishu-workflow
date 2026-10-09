@@ -17,7 +17,7 @@
 2. 使用 `find-skills` 和 skills.sh 选择合适的研究 skill；优先复用已安装的 skill。
 3. 先生成短样例，保留来源、发布日期、URL，并区分事实、推断和未知项。
 4. 按 `lark-doc` 工作流创建并验证飞书文档。
-5. 只有在用户明确确认后，才创建定时任务；未来开始日期使用有起始边界的计划。
+5. 启用前逐项确认四个关卡：用户认可周报样例格式；来源可靠且范围可接受；用户确认飞书文档在手机端可读；首次运行日期、周期、时区、报告位置和通知/链接接收方式均正确。任一项未确认，定时任务保持关闭。未来开始日期使用有起始边界的计划。
 
 ### 依赖与来源仓库
 
@@ -30,7 +30,7 @@
 ### 示例请求
 
 - “关注本周 AI 发展。先找合适的资料 skill，优先官方和一手来源；先生成一份中文飞书样例，标注事实、推断和未知项，暂时不要设定时任务。”
-- “每周五上午 08:00（Asia/Shanghai）收集 AI 行业动态，从我指定的首次日期开始，每次创建新的飞书文档；完整报告只放飞书，聊天只返回状态和链接。先给我任务摘要确认。”
+- “每周五上午 08:00（Asia/Shanghai）收集 AI 行业动态，从我指定的首次日期开始，每次创建新的飞书文档；完整报告只放飞书，聊天只返回状态和链接。启用前先让我确认样例格式、来源可靠性、手机端可读性、首次运行时间和通知方式。”
 - “我有一篇植物保护论文。先提炼主旨、病原、寄主、传播、诊断、防治和易混点，再生成 3～5 道自测题，最后创建飞书复习文档。”
 
 ### 安装
@@ -69,7 +69,7 @@ A Codex skill that turns “request → skill discovery or reuse → reviewed sa
 2. Use `find-skills` and skills.sh to select a suitable research skill; reuse installed skills first.
 3. Produce a short sample with sources, publication dates, URLs, and explicit fact/inference/unknown labels.
 4. Create and verify the Feishu document through the `lark-doc` workflow.
-5. Create a recurring task only after explicit approval; preserve a future start date with an anchored schedule.
+5. Before enabling, confirm four checkpoints: the user approves the sample format; the sources are reliable and the source scope is accepted; the user confirms the Feishu document is readable in the mobile app; and the first-run date, recurrence, timezone, report destination, and notification or link delivery method are correct. Keep the task disabled while any item remains unconfirmed. Preserve a future start date with an anchored schedule.
 
 ### Dependency and source repositories
 
@@ -82,7 +82,7 @@ These links are for source and version lookup. This skill does not install depen
 ### Example requests
 
 - “Track this week’s AI developments. Find a suitable research skill first, prioritize official and primary sources, create a Chinese Feishu sample, label facts, inferences, and unknowns, and do not schedule it yet.”
-- “Every Friday at 08:00 Asia/Shanghai, collect AI industry updates from the specified first-run date, create a new Feishu document for each run, keep the full report in Feishu, and return only a short status and link in chat. Show me the schedule summary before enabling it.”
+- “Every Friday at 08:00 Asia/Shanghai, collect AI industry updates from the specified first-run date, create a new Feishu document for each run, keep the full report in Feishu, and return only a short status and link in chat. Before enabling the schedule, let me confirm the sample format, source reliability, mobile readability, first-run time, and notification method.”
 - “I have a plant-protection paper. Extract the main claim, pathogen, host, transmission, diagnosis, control, and confusing points; generate 3–5 self-test questions; then create a Feishu study document.”
 
 ### Installation
