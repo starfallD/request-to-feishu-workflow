@@ -1,6 +1,6 @@
 ---
 name: request-to-feishu-workflow
-description: Turn a request into a reviewable workflow: clarify the goal, discover or reuse skills, produce a sample, publish it to Feishu, and optionally schedule recurring runs. Use when the user wants this end-to-end workflow or a similar repeatable information task.
+description: "Turn a request into a reviewable workflow: clarify the goal, discover or reuse skills, produce a sample, publish it to Feishu, and optionally schedule recurring runs. Use when the user wants this end-to-end workflow or a similar repeatable information task."
 ---
 
 # Request to Feishu workflow
